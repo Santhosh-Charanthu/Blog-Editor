@@ -1,0 +1,128 @@
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Card Style */
+.blog-card {
+  background: #a8edea;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Status Label */
+.status {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #4e47c2;
+  margin-bottom: 0.5rem;
+}
+
+.status.published {
+  color: #2e7d32;
+}
+
+.status.draft {
+  color: #757575;
+}
+
+/* Card content */
+.blog-card h2 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.blog-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card small {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Action buttons */
+.card-actions {
+  margin-top: 1rem;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #e0f0ff;
+  color: #1976d2;
+}
+
+.edit-btn:hover {
+  background: linear-gradient(90deg, #bbdefb, #e3f2fd);
+}
+
+.delete-btn {
+  background-color: #fce4e4;
+  color: #d32f2f;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(90deg, #f8d7da, #f5c6cb);
+}
+
+@media (max-width: 360px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .blog-card {
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .blog-card h2 {
+    font-size: 1rem;
+  }
+
+  .blog-card p {
+    font-size: 0.9rem;
+  }
+
+  .blog-card small {
+    font-size: 0.75rem;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.6rem;
+    margin-right: 0.4rem;
+  }
+
+  .card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+}
