@@ -131,7 +131,7 @@
     width: 100%;
     max-width: none;
     margin-left: 10px;
-    margin-right: 15px;
+    margin-right: 25px;
     padding: 15px 20px;
     box-sizing: border-box; /* ensures padding included in width */
     overflow-x: hidden; /* prevents horizontal scroll */
