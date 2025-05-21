@@ -77,7 +77,7 @@
 @media (max-width: 640px) {
   .blog-detail-container {
     width: 92vw;
-    margin: 20px auto;
+    margin: 20px;
     padding: 18px 22px;
   }
 
