@@ -82,3 +82,12 @@ body {
 p {
   text-align: center;
 }
+
+@media (max-width: 500px) {
+  .register-container {
+    width: 90vw; /* Ensure it doesn't get too wide */
+    margin: 0 10px; /* Add horizontal margin */
+    padding: 3rem 1.5rem; /* Reduce horizontal padding a bit */
+    box-sizing: border-box;
+  }
+}
