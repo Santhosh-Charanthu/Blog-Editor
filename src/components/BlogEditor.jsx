@@ -98,7 +98,7 @@ const BlogEditor = () => {
     // Authentication check on component mount
     const checkAuth = async () => {
       try {
-        await api.get("/api/auth/me");
+        await api.get("/api/auth/me", { withCredentials: true });
       } catch (error) {
         if (error.response?.status === 401) {
           navigate("/login");
