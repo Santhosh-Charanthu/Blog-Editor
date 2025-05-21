@@ -1,0 +1,30 @@
+.blog-detail {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-detail h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.blog-detail p {
+  font-size: 1.125rem;
+  color: #444;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  margin-bottom: 30px;
+}
+
+.blog-detail small {
+  display: block;
+  font-size: 0.875rem;
+  color: #888;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}

@@ -7,6 +7,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import PrivateRoute from "./components/PrivateRoute";
 import AllBlogs from "./components/AllBlogs";
+import BlogDetail from "./components/BlogDetail";
 import axios from "axios";
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/your-blogs" element={<BlogList filter="your-blogs" />} />
         <Route path="/all-blogs" element={<AllBlogs />} />
+        <Route path="/blogs/:id" element={<BlogDetail />} />
         <Route
           path="/blog-editor"
           element={
