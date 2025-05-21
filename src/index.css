@@ -90,7 +90,7 @@ button:hover {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   position: fixed;
-  top: 5vh;
+  top: 1.5rem;
   right: 1.5rem;
   z-index: 999;
   animation: fadeInOut 3s ease-in-out;
