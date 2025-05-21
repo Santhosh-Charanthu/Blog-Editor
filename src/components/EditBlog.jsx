@@ -66,14 +66,20 @@ const EditBlog = () => {
       return;
     }
     try {
-      await axiosInstance.put(`/api/blogs/${id}`, {
-        title,
-        content,
-        tags: tags.split(",").map((tag) => tag.trim()),
-        status: "published",
-      });
+      await axiosInstance.put(
+        `/api/blogs/${id}`,
+        {
+          title,
+          content,
+          tags: tags.split(",").map((tag) => tag.trim()),
+          status: "published",
+        },
+        {
+          withCredentials: true,
+        }
+      );
       showToast("Blog updated!");
-      navigate("/your-blogs"); // Change to your route for listing blogs
+      navigate("/your-blogs");
     } catch (error) {
       console.error("Update failed", error);
       showToast("Failed to update blog.");

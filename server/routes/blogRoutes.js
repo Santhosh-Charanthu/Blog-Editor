@@ -15,7 +15,7 @@ router.get(
   controller.getUserBlogs
 );
 router.get("/:id", controller.getBlogById);
-router.put("/:id", controller.editBlog);
+router.put("/:id", ensureAuthenticated, controller.editBlog);
 router.delete("/:id", controller.destroyBlog);
 
 module.exports = router;
