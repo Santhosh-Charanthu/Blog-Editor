@@ -45,12 +45,18 @@ const EditBlog = () => {
   const handleAutoSave = async () => {
     if (!title.trim() && !content.trim()) return;
     try {
-      await axiosInstance.put(`/api/blogs/${id}`, {
-        title,
-        content,
-        tags: tags.split(",").map((tag) => tag.trim()),
-        status: "draft",
-      });
+      await axiosInstance.put(
+        `/api/blogs/${id}`,
+        {
+          title,
+          content,
+          tags: tags.split(",").map((tag) => tag.trim()),
+          status: "draft",
+        },
+        {
+          withCredentials: true,
+        }
+      );
       showToast("Draft updated!");
     } catch (error) {
       console.error("Auto-save failed", error);
