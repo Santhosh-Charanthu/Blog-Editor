@@ -13,17 +13,15 @@ const BlogEditor = () => {
 
   const typingTimeoutRef = useRef(null);
 
-  const showToast = (message) => {
-    setToast(message);
-
-    // Move toast to visible screen top
-    const toastEl = document.querySelector(".toast");
-    if (toastEl) {
-      const currentScroll = window.scrollY;
-      toastEl.style.top = `${currentScroll + 20}px`; // 20px from visible top
-    }
-
-    setTimeout(() => setToast(""), 3000);
+  const showToast = (message, type = "success") => {
+    toast.className = "toast"; // Reset classes
+    toast.classList.add(`toast-${type}`); // Add type class
+    toast.textContent = message;
+    toast.style.display = "block"; // Show toast
+    setTimeout(() => {
+      toast.style.display = "none"; // Hide after 3s
+      toast.textContent = ""; // Clear message
+    }, 3000);
   };
 
   const handleAutoSave = async () => {
