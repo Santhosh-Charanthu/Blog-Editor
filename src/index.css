@@ -85,13 +85,14 @@ button:hover {
 }
 
 .toast {
-  position: fixed; /* Fixed to viewport for visibility */
-  top: 5vh; /* 5% from top of viewport */
-  right: 1.5rem;
+  background-color: #2ecc71;
+  color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  z-index: 9999;
-  opacity: 0; /* Start hidden */
+  position: fixed;
+  top: 5vh;
+  right: 1.5rem;
+  z-index: 999;
   animation: fadeInOut 3s ease-in-out;
 }
 

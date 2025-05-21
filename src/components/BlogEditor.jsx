@@ -14,14 +14,9 @@ const BlogEditor = () => {
   const typingTimeoutRef = useRef(null);
 
   const showToast = (message, type = "success") => {
-    toast.className = "toast"; // Reset classes
-    toast.classList.add(`toast-${type}`); // Add type class
-    toast.textContent = message;
-    toast.style.display = "block"; // Show toast
-    setTimeout(() => {
-      toast.style.display = "none"; // Hide after 3s
-      toast.textContent = ""; // Clear message
-    }, 3000);
+    setToastType(type);
+    setToast(message);
+    setTimeout(() => setToast(""), 3000);
   };
 
   const handleAutoSave = async () => {
