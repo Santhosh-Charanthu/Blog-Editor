@@ -85,14 +85,13 @@ button:hover {
 }
 
 .toast {
+  position: absolute; /* make it moveable via JS */
+  right: 1.5rem;
   background-color: #2ecc71;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  position: fixed;
-  top: 5vh;
-  right: 1.5rem;
-  z-index: 999;
+  z-index: 9999;
   animation: fadeInOut 3s ease-in-out;
 }
 

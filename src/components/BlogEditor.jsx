@@ -13,9 +13,16 @@ const BlogEditor = () => {
 
   const typingTimeoutRef = useRef(null);
 
-  const showToast = (message, type = "success") => {
-    setToastType(type);
+  const showToast = (message) => {
     setToast(message);
+
+    // Move toast to visible screen top
+    const toastEl = document.querySelector(".toast");
+    if (toastEl) {
+      const currentScroll = window.scrollY;
+      toastEl.style.top = `${currentScroll + 20}px`; // 20px from visible top
+    }
+
     setTimeout(() => setToast(""), 3000);
   };
 
