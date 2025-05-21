@@ -6,6 +6,7 @@
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Input and Textarea Styling */
@@ -135,7 +136,7 @@
     padding: 1rem 1.5rem;
     margin: 0 auto;
     box-sizing: border-box;
-    overflow-x: hidden; /* prevent horizontal scroll */
+    overflow-x: hidden;
   }
 
   /* Optional: Adjust inputs and buttons a bit */
