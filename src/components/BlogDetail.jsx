@@ -1,8 +1,7 @@
-// src/components/BlogDetail.jsx
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../services/api";
-import "../styles/BlogDetail.css";
+import "../styles/BlogDetail.css"; // import the CSS below
 
 const BlogDetail = () => {
   const { id } = useParams();
@@ -22,13 +21,13 @@ const BlogDetail = () => {
     fetchBlog();
   }, [id]);
 
-  if (!blog) return <p>Loading blog...</p>;
+  if (!blog) return <p className="loading-text">Loading blog...</p>;
 
   return (
-    <div className="blog-detail">
-      <h1>{blog.title}</h1>
-      <p>{blog.content}</p>
-      <small>
+    <div className="blog-detail-container">
+      <h1 className="blog-title">{blog.title}</h1>
+      <div className="blog-content">{blog.content}</div>
+      <small className="blog-dates">
         Created: {new Date(blog.created_at).toLocaleString()} <br />
         Updated: {new Date(blog.updated_at).toLocaleString()}
       </small>
