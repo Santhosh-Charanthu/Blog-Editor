@@ -54,6 +54,8 @@ mongoose
       },
     };
 
+    app.set("trust proxy", 1);
+
     // Setup sessions and passport middleware
     app.use(session(sessionOptions));
     app.use(flash());
