@@ -16,7 +16,7 @@ const app = express();
 // CORS setup to allow frontend requests with cookies
 app.use(
   cors({
-    origin: process.env.CLIENT_URL, // your frontend URL
+    origin: "https://blognest-kmn1.onrender.com", //  frontend URL
     credentials: true, // allow cookies to be sent
   })
 );
