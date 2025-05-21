@@ -116,7 +116,6 @@ const EditBlog = () => {
   return (
     <>
       {toast && <div className="toast">{toast}</div>}
-      <button onClick={handleClick}>All Blogs</button>
       <div className="editor-container">
         <input
           type="text"
