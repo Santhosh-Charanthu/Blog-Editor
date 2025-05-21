@@ -12,6 +12,7 @@ const PrivateRoute = ({ children }) => {
         setAuth(true);
       } catch (err) {
         setAuth(false);
+        console.error("Auth check failed", err);
       }
     };
     checkAuth();
