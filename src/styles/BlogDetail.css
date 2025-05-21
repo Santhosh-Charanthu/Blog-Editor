@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .blog-detail-container {
   width: 80vw;
   max-width: 900px;
@@ -70,6 +74,32 @@
   .loading-text {
     font-size: 1.2rem;
     margin-top: 50px;
+  }
+}
+
+/* Add this new media query between 480px and 768px */
+@media (max-width: 640px) {
+  .blog-detail-container {
+    width: 92vw;
+    margin: 20px auto;
+    padding: 18px 22px;
+  }
+
+  .blog-title {
+    font-size: 1.75rem;
+    margin-bottom: 14px;
+    border-bottom-width: 2px;
+    padding-bottom: 6px;
+  }
+
+  .blog-content {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .blog-dates {
+    font-size: 0.8rem;
+    padding-top: 8px;
   }
 }
 
