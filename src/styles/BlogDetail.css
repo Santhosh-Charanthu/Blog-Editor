@@ -97,3 +97,14 @@
     padding-top: 8px;
   }
 }
+
+@media (max-width: 350px) {
+  .blog-detail-container {
+    width: 100%;
+    max-width: none;
+    margin: 15px;
+    padding: 15px 20px;
+    box-sizing: border-box; /* ensures padding included in width */
+    overflow-x: hidden; /* prevents horizontal scroll */
+  }
+}
