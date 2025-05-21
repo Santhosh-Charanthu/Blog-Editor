@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: "https://draftnest.onrender.com",
   withCredentials: true, // 👈 This is essential to send cookies with requests
 });
 
