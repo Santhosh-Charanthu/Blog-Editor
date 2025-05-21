@@ -49,8 +49,8 @@ mongoose
       cookie: {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
         httpOnly: true,
-        sameSite: "lax", // Change to 'none' and secure:true for production with HTTPS
-        secure: false, // Set to true if using HTTPS in production
+        sameSite: "none",
+        secure: true,
       },
     };
 
