@@ -128,7 +128,7 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 465px) {
+@media (max-width: 470px) {
   .editor-container {
     width: 95vw;
     max-width: none;
@@ -161,6 +161,7 @@
     width: 95vw;
     padding: 1rem;
     border-radius: 10px;
+    overflow-x: hidden;
   }
 
   .editor-container input,
