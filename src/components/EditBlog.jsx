@@ -14,7 +14,7 @@ const EditBlog = () => {
 
   // Create an axios instance that sends cookies for session-based auth
   const axiosInstance = axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: "https://draftnest.onrender.com",
     withCredentials: true, // <-- This is critical to send cookies
   });
 
