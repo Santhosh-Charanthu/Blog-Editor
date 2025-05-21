@@ -130,7 +130,7 @@
   .blog-detail-container {
     width: 100%;
     max-width: none;
-    margin-left: 10px;
+    margin-left: 0;
     margin-right: 25px;
     padding: 15px 20px;
     box-sizing: border-box; /* ensures padding included in width */
