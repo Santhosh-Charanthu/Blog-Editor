@@ -26,7 +26,7 @@ const BlogCard = ({ blog, onEdit, onDelete }) => {
           {blog.status.toUpperCase()}
         </div>
         <span style={{ marginBottom: "10px", color: "#555" }}>
-          by {blog.user?.username || "Unknown"}
+          <b>by {blog.user?.username || "Unknown"}</b>
         </span>
       </div>
 
