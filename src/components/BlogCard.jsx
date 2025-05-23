@@ -14,7 +14,12 @@ const BlogCard = ({ blog, onEdit, onDelete }) => {
       onClick={handleClick}
       style={{ cursor: "pointer" }}
     >
-      <div className={`status ${blog.status}`}>{blog.status.toUpperCase()}</div>
+      <div className={`status ${blog.status}`}>
+        {blog.status.toUpperCase()}
+        <span style={{ marginLeft: "10px", color: "#555" }}>
+          by {blog.user?.username || "Unknown"}
+        </span>
+      </div>
       <h2>{blog.title}</h2>
       <p>{blog.content?.slice(0, 150)}...</p>
       <small>

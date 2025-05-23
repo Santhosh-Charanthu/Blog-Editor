@@ -82,14 +82,18 @@ exports.getBlogsWithFilter = async (req, res) => {
     }
 
     if (filter === "your-blogs") {
-      const blogs = await Blog.find({ user: req.user._id }).sort({
-        updatedAt: -1,
-      });
+      const blogs = await Blog.find({ user: req.user._id })
+        .sort({
+          updatedAt: -1,
+        })
+        .populate("user", "username");
       return res.json(blogs);
     } else if (filter === "all-blogs") {
-      const blogs = await Blog.find({ status: "published" }).sort({
-        updatedAt: -1,
-      });
+      const blogs = await Blog.find({ status: "published" })
+        .sort({
+          updatedAt: -1,
+        })
+        .populate("user", "username");
       return res.json(blogs);
     } else {
       return res.status(400).json({ message: "Invalid filter" });
