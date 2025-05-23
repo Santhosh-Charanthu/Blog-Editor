@@ -4,7 +4,7 @@ BlogNest is a full-featured MERN stack blogging platform that allows users to wr
 
 ## 🌐 Live Demo
 
-- **Demo Link**: [https://blognest-kmn1.onrender.com](https://blognest-kmn1.onrender.com/blog-editor)
+- **Demo Link**: [https://blognest-kmn1.onrender.com/blog-editor](https://blognest-kmn1.onrender.com/blog-editor)
 
 ---
 
