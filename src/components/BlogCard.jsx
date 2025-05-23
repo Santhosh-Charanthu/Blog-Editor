@@ -25,7 +25,7 @@ const BlogCard = ({ blog, onEdit, onDelete }) => {
         <div className={`status ${blog.status}`}>
           {blog.status.toUpperCase()}
         </div>
-        <span style={{ color: "#555" }}>
+        <span style={{ marginBottom: "10px", color: "#555" }}>
           by {blog.user?.username || "Unknown"}
         </span>
       </div>
