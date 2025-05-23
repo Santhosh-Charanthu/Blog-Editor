@@ -25,6 +25,21 @@ const BlogDetail = () => {
 
   return (
     <div className="blog-detail-container">
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          marginBottom: "10px",
+        }}
+      >
+        <div className={`status ${blog.status}`}>
+          {blog.status.toUpperCase()}
+        </div>
+        <span style={{ marginBottom: "10px", color: "#555" }}>
+          <b>by {blog.user?.username || "Unknown"}</b>
+        </span>
+      </div>
       <h1 className="blog-title">{blog.title}</h1>
       <div className="blog-content">{blog.content}</div>
       <small className="blog-dates">
