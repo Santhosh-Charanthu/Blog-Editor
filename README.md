@@ -1,50 +1,106 @@
-# 📝 BlogNest - Full Stack Blogging Platform
+# 📝 BlogNest – Full-Stack Blog Editor Platform
 
-BlogNest is a full-featured MERN stack blogging platform that allows users to write, auto-save drafts, publish blogs, and manage their posts. It includes user authentication with session-based login and a sleek, user-friendly interface.
-
-## 🌐 Live Demo
-
-- **Demo Link**: [https://blognest-kmn1.onrender.com/blog-editor](https://blognest-kmn1.onrender.com/blog-editor)
+**BlogNest** is a responsive, full-stack blogging platform built with the MERN stack. It allows users to create, auto-save, and manage blog drafts and published posts efficiently. The platform is split into two independently deployed components: a React.js frontend and a Node.js/Express backend connected to MongoDB Atlas.
 
 ---
 
 ## 🚀 Features
 
-- 🧠 **Auto-save Drafts** – Blogs are saved every few seconds while typing
-- ✍️ **Rich Blog Editor** – Create and update blog posts with title, content, and tags
-- ✅ **Session-based Authentication** – Secure login using `passport.js` and `express-session`
-- 🔐 **Protected Routes** – Only authenticated users can create, edit, or update blogs
-- 📂 **Your Blogs Page** – View, edit, and manage your published and draft blogs
-- 📱 **Responsive Design** – Mobile and desktop-friendly layout
-- 📦 **REST API** – Cleanly structured REST endpoints for blog operations
+### ✍️ Blog Editor
+- Clean, distraction-free writing interface
+- **Auto-save draft** triggered on **5 seconds of user inactivity**
+- Edit/update previously saved blogs without manual save
+- Debounced API calls to prevent redundant server hits
+
+### 🔐 Authentication
+- User registration & login with session-based auth
+- Secure password hashing
+- Protected routes and role-based access
+
+### 📋 Blog Management
+- Create, save, and publish blogs
+- View your published and drafted posts
+- Structured blog listing with timestamps
+
+### 💾 Backend Services
+- REST API built with Express.js
+- MongoDB Atlas integration
+- Tested with Hoppscotch and Chrome DevTools
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-### Frontend
-
-- **React.js** – Component-based frontend framework
-- **React Router** – Navigation and routing
-- **Axios** – HTTP requests with `withCredentials` for cookies
-- **CSS** – Custom styles for layout and toast notifications
-
-### Backend
-
-- **Node.js + Express.js** – RESTful API and server logic
-- **MongoDB + Mongoose** – NoSQL database and object modeling
-- **Passport.js** – Authentication middleware
-- **Express-session** – Handles user sessions via cookies
-- **MongoStore** – Stores sessions in MongoDB
-- **CORS** – Secure cross-origin resource sharing
+| Layer         | Tech Used                            |
+|---------------|---------------------------------------|
+| **Frontend**  | React.js, CSS3, Bootstrap             |
+| **Backend**   | Node.js, Express.js                   |
+| **Database**  | MongoDB Atlas + Mongoose              |
+| **Auth**      | Passport.js, express-session          |
+| **Deployment**| Render (frontend & backend separately)|
 
 ---
 
-## 🔐 Authentication Flow
+## ⚙️ Setup Instructions
 
-- Users log in using a email and password
-- Upon success, a session cookie (`connect.sid`) is set via `express-session`
-- All subsequent requests include this cookie (`withCredentials: true`)
-- Protected routes check for authenticated sessions before allowing access
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Santhosh-Charanthu/BlogNest.git
+cd BlogNest
+
+```
+
+### 2. Install Backend Dependencies
+
+cd server
+npm install
+
+### 3. Set Up Backend .env
+Create a file named .env in the server/ directory with:
+MONGO_URI=your_mongodb_uri
+
+SESSION_SECRET=your_secret
+
+### 4. cd ..
+npm install
+
+###5. Set Up Frontend .env
+Create a .env file in the src/ directory:
+REACT_APP_API_URL=https://draftnest.onrender.com
+
+### 5. 6. Run Locally
+Start backend:
+cd server
+node app.js
+
+Start frontend
+cd ..
+npm run dev
+
+## 🌐 Live Demo- **Demo Link**: [Demo](https://blognest-kmn1.onrender.com/blog-editor)---
+
+## 🧠 Future Enhancements
+
+- 🖼️ Blog image upload support  
+- 📄 Markdown or rich-text editor  
+- 💬 Comments section under each blog  
+- 📊 Dashboard analytics for blog stats  
+- 🔔 Email notifications
 
 ---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and feedback are welcome!  
+Please open an issue or submit a pull request to collaborate.
+
+---
+
+## 👨‍💻 Author
+
+**Santhosh Charanthu**  
+Full-Stack Developer | MERN Specialist  
+📬 [Connect on LinkedIn](https://www.linkedin.com/in/santhosh-charanthu-bb6102300/)
+
+
