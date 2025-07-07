@@ -46,7 +46,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Santhosh-Charanthu/BlogNest.git
+git clone https://github.com/Santhosh-Charanthu/Blog-Editor
 cd BlogNest
 
 ```
