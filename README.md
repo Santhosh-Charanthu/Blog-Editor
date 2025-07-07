@@ -78,7 +78,9 @@ Start frontend
 cd ..
 npm run dev
 
-## 🌐 Live Demo- **Demo Link**: [Demo](https://blognest-kmn1.onrender.com/blog-editor)---
+## 🌐 Live Demo- **Demo Link**: [BlogNest](https://blognest-kmn1.onrender.com/blog-editor)
+
+---
 
 ## 🧠 Future Enhancements
 
